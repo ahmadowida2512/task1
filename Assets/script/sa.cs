@@ -11,7 +11,7 @@ public class sa : MonoBehaviour
    string[] words={"Cat, Dog, Car, Pizza, Hat, Fish, Tree, Monkey, Ball, Bird"};
    string len= words.Length.ToString();
 //  Debug.Log(len);
-//  int sayahh=0;
+  int sayahh=0;
 while (sayahh < words.Length){
 Debug.Log(words[sayahh]);
 sayahh++;
