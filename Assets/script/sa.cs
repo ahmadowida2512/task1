@@ -26,6 +26,7 @@ continue;
    
       else if (sayhh == 15){
 Debug.Log("ya lahoyyyyyyyyyyyyyyyyyyyyyyyyyysad213");
+Debug.Log("ya ld");
 break;
 
 
