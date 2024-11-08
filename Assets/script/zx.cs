@@ -1,30 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System; 
-using System.CodeDom;
 
-public class zx : MonoBehaviour
+public class Player
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-string[] authors = { "Mahesh Chand", "Jeff Prosise", "Dave McCarter", "Allen O'neill",
-"Monica Rathbun", "Henry He", "Raj Kumar", "Mark Prime",
-"Rose Tracey", "Mike Crown" };
+    public string playerName;
+    public int health;
 
-// Create a Random object
+    public static int playerCount = 0;
 
-// Generate a random index less than the size of the array.
 
-// Display the result.
+    // public Player(string ahmed, int initialHealth)
+    // {
+    //     playerName = ahmed;
+    //     health = initialHealth;
+    //     playerCount++;
+    // }
     
-
-
-    // Update is called once per frame
-    void Update()
+    // public Player(){
+    //       playerName = "";
+    //     health = 100;
+    //     playerCount++;
+    // }
+    public void InitializePlayer(string ahmed, int initialHealth)
     {
-        
+        playerName = ahmed;
+        health = initialHealth;
+        playerCount++;
     }
-}
+
+
+    // Method to heal by a specified amount
+    public void Heal(int amount)
+    {
+        health += amount;
+         Debug.Log($"{playerName} healed by {amount}. Current health: {health}");
+    }
+
+    // Overloaded Heal method to fully restore health
+    public void Heal(bool fullRestore)
+    {
+        if (fullRestore)
+        {
+            health = 100; // Assuming 100 is the full health
+        }
+    }
+
+    public static void ShowPlayerCount()
+    {
+    }
 }
